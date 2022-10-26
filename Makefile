@@ -1,2 +1,5 @@
 run:
-	./task_manager/manage.py runserver
+	poetry run python manage.py runserver
+
+get_requirements:
+	poetry export --without-hashes > requirements.txt
