@@ -1,5 +1,5 @@
-import re
-from django.shortcuts import render
+from django.views.generic import TemplateView
+from django.utils.translation import gettext
 
-def index(request):
-    return render(request, 'index.html')
+class IndexView(TemplateView):
+    pass
