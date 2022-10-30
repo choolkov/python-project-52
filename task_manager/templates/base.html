@@ -1,0 +1,30 @@
+{% load bootstrap4 %}
+{% bootstrap_css %}
+
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+      shrink-to-fit=no" />
+    <title>{% translate 'Task Manager' %}</title>
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <header>
+      {% include 'navbar.html' %}
+    </header>
+    <main class="container wrapper flex-grow-1">
+      <h1>
+        {% block header %}
+        {% endblock %}
+      </h1>
+      {% block content %}
+      {% endblock %}
+    </main>
+    <footer class="footer bg-light">
+      {% include 'footer.html' %}
+    </footer>
+  </body>
+</html>

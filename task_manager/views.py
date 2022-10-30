@@ -1,5 +1,9 @@
-from django.views.generic import TemplateView
-from django.utils.translation import gettext
+"""Task Manager views."""
 
-class IndexView(TemplateView):
-    pass
+from django.contrib.auth.models import User
+from django.views.generic.list import ListView
+
+
+class UserListView(ListView):
+    queryset = User.objects.filter(is_staff=False)
+    template_name = 'user_list.html'
