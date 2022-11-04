@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-30 17:07+0300\n"
+"POT-Creation-Date: 2022-11-04 19:24+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,55 +20,77 @@ msgstr ""
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: task_manager/templates/auth/user_list.html:4
-#: task_manager/templates/navbar.html:11
-msgid "Users"
-msgstr "Пользователи"
-
-#: task_manager/templates/auth/user_list.html:11
-msgid "Username"
-msgstr "Имя пользователя"
-
-#: task_manager/templates/auth/user_list.html:12
-msgid "Full name"
-msgstr "Полное имя"
-
-#: task_manager/templates/auth/user_list.html:13
-msgid "Date of creation"
-msgstr "Дата создания"
-
-#: task_manager/templates/auth/user_list.html:27
-msgid "Change"
-msgstr "Изменить"
-
-#: task_manager/templates/auth/user_list.html:31
-msgid "Delete"
-msgstr "Удалить"
-
-#: task_manager/templates/auth/user_list.html:36
-msgid "No users yet."
-msgstr "Нет пользователей."
-
-#: task_manager/templates/base.html:12 task_manager/templates/navbar.html:4
+#: task_manager/templates/base.html:11 task_manager/templates/navbar.html:4
 msgid "Task Manager"
 msgstr "Менеджер задач"
 
-#: task_manager/templates/index.html:11
+#: task_manager/templates/index.html:9
 msgid "Hello from Hexlet!"
 msgstr "Привет от Хекслета!"
 
-#: task_manager/templates/index.html:14
+#: task_manager/templates/index.html:12
 msgid "Practical programming courses"
 msgstr "Практические курсы по программированию"
 
-#: task_manager/templates/index.html:17
+#: task_manager/templates/index.html:15
 msgid "Read more"
 msgstr "Узнать больше"
 
-#: task_manager/templates/navbar.html:16
+#: task_manager/templates/login.html:5 task_manager/templates/navbar.html:22
 msgid "Sign in"
 msgstr "Вход"
 
-#: task_manager/templates/navbar.html:19
+#: task_manager/templates/login.html:6
+msgid "Login"
+msgstr "Войти"
+
+#: task_manager/templates/navbar.html:11
+#: task_manager/templates/users/list.html:4
+msgid "Users"
+msgstr "Пользователи"
+
+#: task_manager/templates/navbar.html:17
+msgid "Sign out"
+msgstr "Выход"
+
+#: task_manager/templates/navbar.html:25
+#: task_manager/templates/users/create.html:5
 msgid "Sign up"
 msgstr "Регистрация"
+
+#: task_manager/templates/users/create.html:6
+msgid "Register"
+msgstr "Зарегистрировать"
+
+#: task_manager/templates/users/list.html:11
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: task_manager/templates/users/list.html:12
+msgid "Full name"
+msgstr "Полное имя"
+
+#: task_manager/templates/users/list.html:13
+msgid "Date of creation"
+msgstr "Дата создания"
+
+#: task_manager/templates/users/list.html:27
+msgid "Change"
+msgstr "Изменить"
+
+#: task_manager/templates/users/list.html:31
+msgid "Delete"
+msgstr "Удалить"
+
+#: task_manager/templates/users/list.html:36
+msgid "No users yet."
+msgstr "Нет пользователей."
+
+#: task_manager/views.py:24
+msgid "You are logged in"
+msgstr "Вы залогинены"
+
+#: task_manager/views.py:29
+msgid "You are logged out"
+msgstr "Вы разлогинены"
+
