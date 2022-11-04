@@ -1,5 +1,4 @@
 {% load bootstrap4 %}
-{% bootstrap_css %}
 
 {% load i18n %}
 {% get_current_language as LANGUAGE_CODE %}
@@ -10,6 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1,
       shrink-to-fit=no" />
     <title>{% translate 'Task Manager' %}</title>
+    {% bootstrap_css %}
+    {% bootstrap_javascript jquery=True %}
   </head>
   <body class="d-flex flex-column min-vh-100">
     <header>
