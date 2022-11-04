@@ -1,0 +1,10 @@
+{% extends 'delete_form.html' %}
+{% load i18n %}
+{% load bootstrap4 %}
+
+{% block header %}{% translate 'Delete user' %}{% endblock %}
+{% block button %}{% translate 'Yes, delete' %}{% endblock %}
+
+{% block confirm_message %}
+{% translate 'Are you sure you want to delete' %} "{{ object.first_name }} {{ object.last_name }}"?
+{% endblock %}

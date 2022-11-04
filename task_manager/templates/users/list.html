@@ -22,11 +22,9 @@
       <td>{{ user.get_full_name }}</td>
       <td>{{ user.date_joined }}</td>
       <td>
-        {% comment %} <a href="{% url " user-update" user.id %}">{% translate "Change" %}</a> {% endcomment %}
-        <a href="/users/{{ user.id }}/update/">{% translate "Change" %}</a>
+        <a href="{% url "users:update" user.id %}">{% translate "Change" %}</a>
         <br>
-        {% comment %} <a href="{% url " user-delete" user.id %}">{% translate "Delete" %}</a> {% endcomment %}
-        <a href="/users/{{ user.id }}/delete/">{% translate "Delete" %}</a>
+        <a href="{% url "users:delete" user.id %}">{% translate "Delete" %}</a>
       </td>
     </tr>
     {% empty %}

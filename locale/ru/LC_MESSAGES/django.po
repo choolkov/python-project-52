@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-04 19:24+0300\n"
+"POT-Creation-Date: 2022-11-04 23:47+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -62,6 +62,18 @@ msgstr "Регистрация"
 msgid "Register"
 msgstr "Зарегистрировать"
 
+#: task_manager/templates/users/delete.html:5
+msgid "Delete user"
+msgstr "Удаление пользователя"
+
+#: task_manager/templates/users/delete.html:6
+msgid "Yes, delete"
+msgstr "Да, удалить"
+
+#: task_manager/templates/users/delete.html:9
+msgid "Are you sure you want to delete"
+msgstr "Вы уверены, что хотите удалить"
+
 #: task_manager/templates/users/list.html:11
 msgid "Username"
 msgstr "Имя пользователя"
@@ -86,6 +98,22 @@ msgstr "Удалить"
 msgid "No users yet."
 msgstr "Нет пользователей."
 
+#: task_manager/templates/users/update.html:5
+msgid "Update user"
+msgstr "Изменение пользователя "
+
+#: task_manager/templates/users/update.html:6
+msgid "Update"
+msgstr "Изменить"
+
+#: task_manager/users/views.py:28
+msgid "The user is successfully changed"
+msgstr "Пользователь успешно изменён "
+
+#: task_manager/users/views.py:34
+msgid "The user is successfully deleted"
+msgstr "Пользователь успешно изменён "
+
 #: task_manager/views.py:24
 msgid "You are logged in"
 msgstr "Вы залогинены"
@@ -93,4 +121,3 @@ msgstr "Вы залогинены"
 #: task_manager/views.py:29
 msgid "You are logged out"
 msgstr "Вы разлогинены"
-
