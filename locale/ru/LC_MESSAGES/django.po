@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-04 23:47+0300\n"
+"POT-Creation-Date: 2022-11-05 19:16+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,9 +20,56 @@ msgstr ""
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: task_manager/templates/base.html:11 task_manager/templates/navbar.html:4
+#: task_manager/statuses/forms.py:12
+#: task_manager/templates/statuses/list.html:12
+msgid "Name"
+msgstr "Имя"
+
+#: task_manager/statuses/views.py:24
+msgid "The status is successfully created"
+msgstr "Статус успешно создан"
+
+#: task_manager/statuses/views.py:32
+msgid "The status is successfully changed"
+msgstr "Статус успешно изменен"
+
+#: task_manager/statuses/views.py:34 task_manager/statuses/views.py:44
+#: task_manager/users/views.py:32 task_manager/users/views.py:42
+msgid "You are not authorized! Please complete the entrance."
+msgstr "Вы не авторизованы! Пожалуйста, выполните вход."
+
+#: task_manager/statuses/views.py:42
+msgid "The status is successfully deleted"
+msgstr "Статус успешно удален"
+
+#: task_manager/templates/components/base.html:11
+#: task_manager/templates/components/navbar.html:4
 msgid "Task Manager"
 msgstr "Менеджер задач"
+
+#: task_manager/templates/components/navbar.html:11
+#: task_manager/templates/users/list.html:4
+msgid "Users"
+msgstr "Пользователи"
+
+#: task_manager/templates/components/navbar.html:15
+#: task_manager/templates/statuses/list.html:4
+msgid "Statuses"
+msgstr "Статусы"
+
+#: task_manager/templates/components/navbar.html:22
+msgid "Sign out"
+msgstr "Выход"
+
+#: task_manager/templates/components/navbar.html:27
+#: task_manager/templates/login.html:5
+msgid "Sign in"
+msgstr "Вход"
+
+#: task_manager/templates/components/navbar.html:30
+#: task_manager/templates/users/create.html:5
+msgid "Sign up"
+msgstr "Регистрация"
 
 #: task_manager/templates/index.html:9
 msgid "Hello from Hexlet!"
@@ -36,27 +83,60 @@ msgstr "Практические курсы по программировани�
 msgid "Read more"
 msgstr "Узнать больше"
 
-#: task_manager/templates/login.html:5 task_manager/templates/navbar.html:22
-msgid "Sign in"
-msgstr "Вход"
-
 #: task_manager/templates/login.html:6
 msgid "Login"
 msgstr "Войти"
 
-#: task_manager/templates/navbar.html:11
-#: task_manager/templates/users/list.html:4
-msgid "Users"
-msgstr "Пользователи"
+#: task_manager/templates/statuses/create.html:5
+#: task_manager/templates/statuses/list.html:7
+msgid "Create status"
+msgstr "Создать статус"
 
-#: task_manager/templates/navbar.html:17
-msgid "Sign out"
-msgstr "Выход"
+#: task_manager/templates/statuses/create.html:6
+msgid "Create"
+msgstr "Создать"
 
-#: task_manager/templates/navbar.html:25
-#: task_manager/templates/users/create.html:5
-msgid "Sign up"
-msgstr "Регистрация"
+#: task_manager/templates/statuses/delete.html:5
+msgid "Delete status"
+msgstr "Удаление статуса"
+
+#: task_manager/templates/statuses/delete.html:6
+#: task_manager/templates/users/delete.html:6
+msgid "Yes, delete"
+msgstr "Да, удалить"
+
+#: task_manager/templates/statuses/delete.html:9
+#: task_manager/templates/users/delete.html:9
+msgid "Are you sure you want to delete"
+msgstr "Вы уверены, что хотите удалить"
+
+#: task_manager/templates/statuses/list.html:13
+#: task_manager/templates/users/list.html:13
+msgid "Date of creation"
+msgstr "Дата создания"
+
+#: task_manager/templates/statuses/list.html:24
+#: task_manager/templates/users/list.html:25
+msgid "Change"
+msgstr "Изменить"
+
+#: task_manager/templates/statuses/list.html:26
+#: task_manager/templates/users/list.html:27
+msgid "Delete"
+msgstr "Удалить"
+
+#: task_manager/templates/statuses/list.html:31
+msgid "No statuses yet."
+msgstr "Нет статусов."
+
+#: task_manager/templates/statuses/update.html:5
+msgid "Update status"
+msgstr "Изменение статуса"
+
+#: task_manager/templates/statuses/update.html:6
+#: task_manager/templates/users/update.html:6
+msgid "Update"
+msgstr "Изменить"
 
 #: task_manager/templates/users/create.html:6
 msgid "Register"
@@ -66,14 +146,6 @@ msgstr "Зарегистрировать"
 msgid "Delete user"
 msgstr "Удаление пользователя"
 
-#: task_manager/templates/users/delete.html:6
-msgid "Yes, delete"
-msgstr "Да, удалить"
-
-#: task_manager/templates/users/delete.html:9
-msgid "Are you sure you want to delete"
-msgstr "Вы уверены, что хотите удалить"
-
 #: task_manager/templates/users/list.html:11
 msgid "Username"
 msgstr "Имя пользователя"
@@ -82,19 +154,7 @@ msgstr "Имя пользователя"
 msgid "Full name"
 msgstr "Полное имя"
 
-#: task_manager/templates/users/list.html:13
-msgid "Date of creation"
-msgstr "Дата создания"
-
-#: task_manager/templates/users/list.html:27
-msgid "Change"
-msgstr "Изменить"
-
-#: task_manager/templates/users/list.html:31
-msgid "Delete"
-msgstr "Удалить"
-
-#: task_manager/templates/users/list.html:36
+#: task_manager/templates/users/list.html:32
 msgid "No users yet."
 msgstr "Нет пользователей."
 
@@ -102,17 +162,17 @@ msgstr "Нет пользователей."
 msgid "Update user"
 msgstr "Изменение пользователя "
 
-#: task_manager/templates/users/update.html:6
-msgid "Update"
-msgstr "Изменить"
+#: task_manager/users/views.py:22
+msgid "The user is successfully registered"
+msgstr "Пользователь успешно зарегистрирован"
 
-#: task_manager/users/views.py:28
+#: task_manager/users/views.py:30
 msgid "The user is successfully changed"
-msgstr "Пользователь успешно изменён "
+msgstr "Пользователь успешно изменен "
 
-#: task_manager/users/views.py:34
+#: task_manager/users/views.py:40
 msgid "The user is successfully deleted"
-msgstr "Пользователь успешно изменён "
+msgstr "Пользователь успешно удален "
 
 #: task_manager/views.py:24
 msgid "You are logged in"

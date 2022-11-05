@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy
@@ -13,23 +14,30 @@ class UserListView(ListView):
     template_name = 'users/list.html'
 
 
-class RegistrationView(CreateView):
+class RegistrationView(SuccessMessageMixin, CreateView):
     model = User
     form_class = UserForm
     template_name = 'users/create.html'
     success_url = reverse_lazy('login')
+    success_message = _('The user is successfully registered')
 
 
-class UpdateUserView(SuccessMessageMixin, UpdateView):
+class UpdateUserView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = User
     form_class = UserForm
     template_name = 'users/update.html'
     success_url = reverse_lazy('users:list')
     success_message = _('The user is successfully changed')
+    permission_denied_message = _(
+        'You are not authorized! Please complete the entrance.',
+    )
 
-class DeleteUserView(SuccessMessageMixin, DeleteView):
+
+class DeleteUserView(LoginRequiredMixin, SuccessMessageMixin, DeleteView):
     model = User
     template_name = 'users/delete.html'
     success_url = reverse_lazy('users:list')
     success_message = _('The user is successfully deleted')
-    'Are you sure you want to delete Name Lastname?'
+    permission_denied_message = _(
+        'You are not authorized! Please complete the entrance.',
+    )
