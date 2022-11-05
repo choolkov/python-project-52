@@ -1,12 +1,12 @@
-{% extends 'base.html' %}
+{% extends 'components/base.html' %}
 {% load bootstrap4 %}
 {% bootstrap_css %}
 {% load i18n %}
 
 {% block content %}
+<p>{% block confirm_message %}{% endblock %}</p>
 <form method="post">
   {% csrf_token %}
-  <p>{% block confirm_message %}{% endblock %}</p>
   {% buttons %}
   <input class="btn btn-danger" type="submit" value="{% block button %}{% endblock %}">
   {% endbuttons %}
