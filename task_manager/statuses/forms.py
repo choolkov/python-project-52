@@ -9,4 +9,5 @@ class StatusForm(ModelForm):
     class Meta:
         model = Status
         fields = ('name',)
+        localized_fields = ('name',)
         labels = {"name": _("Name")}
