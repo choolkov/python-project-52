@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-15 20:22+0300\n"
+"POT-Creation-Date: 2022-11-15 21:21+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,7 +35,7 @@ msgid "The status is successfully changed"
 msgstr "Статус успешно изменен"
 
 #: task_manager/statuses/views.py:32 task_manager/statuses/views.py:42
-#: task_manager/tasks/views.py:43 task_manager/tasks/views.py:53
+#: task_manager/tasks/views.py:44 task_manager/tasks/views.py:57
 #: task_manager/users/views.py:32 task_manager/users/views.py:42
 msgid "You are not authorized! Please complete the entrance."
 msgstr "Вы не авторизованы! Пожалуйста, выполните вход."
@@ -58,17 +58,21 @@ msgstr "Описание"
 msgid "Status"
 msgstr "Статус"
 
-#: task_manager/tasks/views.py:33
+#: task_manager/tasks/views.py:34
 msgid "The task is successfully created"
 msgstr "Задача успешно создана"
 
-#: task_manager/tasks/views.py:41
+#: task_manager/tasks/views.py:42
 msgid "The task is successfully changed"
 msgstr "Задача успешно изменена"
 
-#: task_manager/tasks/views.py:51
+#: task_manager/tasks/views.py:55
 msgid "The task is successfully deleted"
 msgstr "Задача успешно удалена"
+
+#: task_manager/tasks/views.py:60
+msgid "The task can only be deleted by its author."
+msgstr "Задачу может удалить только её автор"
 
 #: task_manager/templates/components/base.html:11
 #: task_manager/templates/components/navbar.html:4

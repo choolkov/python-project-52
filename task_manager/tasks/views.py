@@ -7,6 +7,7 @@ from django.views.generic.list import ListView
 
 from task_manager.tasks.forms import TaskForm
 from task_manager.tasks.models import Task
+from task_manager.users.mixins import AuthorRequiredMixin
 
 
 class TaskView(DetailView):
@@ -44,7 +45,9 @@ class UpdateTaskView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     )
 
 
-class DeleteTaskView(LoginRequiredMixin, SuccessMessageMixin, DeleteView):
+class DeleteTaskView(
+    LoginRequiredMixin, AuthorRequiredMixin, SuccessMessageMixin, DeleteView
+):
     model = Task
     template_name = 'tasks/delete.html'
     success_url = reverse_lazy('tasks:list')
@@ -52,3 +55,5 @@ class DeleteTaskView(LoginRequiredMixin, SuccessMessageMixin, DeleteView):
     permission_denied_message = _(
         'You are not authorized! Please complete the entrance.',
     )
+    failure_url = reverse_lazy("tasks:list")
+    failure_message = _("The task can only be deleted by its author.")
