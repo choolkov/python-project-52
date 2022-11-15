@@ -1,0 +1,41 @@
+{% extends 'components/base.html' %}
+{% load i18n %}
+
+{% block header %}{% translate "Tasks preview" %}{% endblock %}
+
+{% block content %}
+<div class="card">
+  <div class="card-header bg-secondary text-white">
+    <h2>{{ object.name }}</h2>
+  </div>
+  <div class="card-body bg-light">
+    <p>{{ object.description }}</p>
+    <hr>
+    <div class="container">
+      <div class="row p-1">
+        <div class="col">{% translate "Author" %}</div>
+        <div class="col">{{ object.author }}</div>
+      </div>
+      <div class="row p-1">
+        <div class="col">{% translate "Implementer" %}</div>
+        <div class="col">{{ object.implementer }}</div>
+      </div>
+      <div class="row p-1">
+        <div class="col">{% translate "Status" %}</div>
+        <div class="col">{{ object.status }}</div>
+      </div>
+      <div class="row p-1">
+        <div class="col">{% translate "Date of creation" %}</div>
+        <div class="col">{{ object.date_created }}</div>
+      </div>
+      <div class="row p-1">
+        <div class="col">
+          <a href="{% url "tasks:update" task.id %}">{% translate "Change" %}</a>
+          <br>
+          <a href="{% url "tasks:delete" task.id %}">{% translate "Delete" %}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

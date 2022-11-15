@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-11 21:50+0300\n"
+"POT-Creation-Date: 2022-11-15 20:22+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: task_manager/statuses/forms.py:13 task_manager/tasks/forms.py:13
+#: task_manager/statuses/forms.py:13 task_manager/tasks/forms.py:22
 #: task_manager/templates/statuses/list.html:12
 #: task_manager/templates/tasks/list.html:12
 msgid "Name"
@@ -35,7 +35,7 @@ msgid "The status is successfully changed"
 msgstr "Статус успешно изменен"
 
 #: task_manager/statuses/views.py:32 task_manager/statuses/views.py:42
-#: task_manager/tasks/views.py:32 task_manager/tasks/views.py:42
+#: task_manager/tasks/views.py:43 task_manager/tasks/views.py:53
 #: task_manager/users/views.py:32 task_manager/users/views.py:42
 msgid "You are not authorized! Please complete the entrance."
 msgstr "Вы не авторизованы! Пожалуйста, выполните вход."
@@ -44,15 +44,29 @@ msgstr "Вы не авторизованы! Пожалуйста, выполни
 msgid "The status is successfully deleted"
 msgstr "Статус успешно удален"
 
-#: task_manager/tasks/views.py:22
+#: task_manager/tasks/forms.py:23 task_manager/templates/tasks/list.html:15
+#: task_manager/templates/tasks/preview.html:20
+msgid "Implementer"
+msgstr "Исполнитель"
+
+#: task_manager/tasks/forms.py:24
+msgid "Description"
+msgstr "Описание"
+
+#: task_manager/tasks/forms.py:25 task_manager/templates/tasks/list.html:13
+#: task_manager/templates/tasks/preview.html:24
+msgid "Status"
+msgstr "Статус"
+
+#: task_manager/tasks/views.py:33
 msgid "The task is successfully created"
 msgstr "Задача успешно создана"
 
-#: task_manager/tasks/views.py:30
+#: task_manager/tasks/views.py:41
 msgid "The task is successfully changed"
 msgstr "Задача успешно изменена"
 
-#: task_manager/tasks/views.py:40
+#: task_manager/tasks/views.py:51
 msgid "The task is successfully deleted"
 msgstr "Задача успешно удалена"
 
@@ -74,7 +88,7 @@ msgstr "Статусы"
 #: task_manager/templates/components/navbar.html:18
 #: task_manager/templates/tasks/list.html:4
 msgid "Tasks"
-msgstr ""
+msgstr "Задачи"
 
 #: task_manager/templates/components/navbar.html:25
 msgid "Sign out"
@@ -133,19 +147,22 @@ msgid "Are you sure you want to delete"
 msgstr "Вы уверены, что хотите удалить"
 
 #: task_manager/templates/statuses/list.html:13
-#: task_manager/templates/tasks/list.html:13
+#: task_manager/templates/tasks/list.html:16
+#: task_manager/templates/tasks/preview.html:28
 #: task_manager/templates/users/list.html:13
 msgid "Date of creation"
 msgstr "Дата создания"
 
 #: task_manager/templates/statuses/list.html:24
-#: task_manager/templates/tasks/list.html:24
+#: task_manager/templates/tasks/list.html:30
+#: task_manager/templates/tasks/preview.html:33
 #: task_manager/templates/users/list.html:25
 msgid "Change"
 msgstr "Изменить"
 
 #: task_manager/templates/statuses/list.html:26
-#: task_manager/templates/tasks/list.html:26
+#: task_manager/templates/tasks/list.html:32
+#: task_manager/templates/tasks/preview.html:35
 #: task_manager/templates/users/list.html:27
 msgid "Delete"
 msgstr "Удалить"
@@ -173,9 +190,18 @@ msgstr "Создать задачу"
 msgid "Delete task"
 msgstr "Удаление задачи"
 
-#: task_manager/templates/tasks/list.html:31
+#: task_manager/templates/tasks/list.html:14
+#: task_manager/templates/tasks/preview.html:16
+msgid "Author"
+msgstr "Автор"
+
+#: task_manager/templates/tasks/list.html:37
 msgid "No tasks yet."
 msgstr "Нет задач."
+
+#: task_manager/templates/tasks/preview.html:4
+msgid "Tasks preview"
+msgstr "Просмотр задачи"
 
 #: task_manager/templates/tasks/update.html:5
 msgid "Update task"
