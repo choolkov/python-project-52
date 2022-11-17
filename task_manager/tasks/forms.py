@@ -17,10 +17,12 @@ class TaskForm(ModelForm):
             'implementer',
             'description',
             'status',
+            'labels',
             )
         labels = {
             'name': _('Name'),
             'implementer': _('Implementer'),
             'description': _('Description'),
             'status': _('Status'),
+            'labels': _('Labels'),
             }

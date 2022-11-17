@@ -5,6 +5,7 @@ from django.db import models
 from django.utils import timezone
 
 from task_manager.statuses.models import Status
+from task_manager.labels.models import Label
 
 
 class Task(models.Model):
@@ -17,4 +18,10 @@ class Task(models.Model):
         User, on_delete=models.PROTECT, related_name='assigned_tasks_set',
     )
     status = models.ForeignKey(Status, on_delete=models.PROTECT)
+    labels = models.ManyToManyField(Label, through='TaskAndLabel')
     date_created = models.DateTimeField(default=timezone.now)
+
+
+class TaskAndLabel(models.Model):
+    task = models.ForeignKey(Task, on_delete=models.CASCADE)
+    label = models.ForeignKey(Label, on_delete=models.PROTECT)
