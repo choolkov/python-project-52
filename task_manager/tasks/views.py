@@ -4,9 +4,11 @@ from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import CreateView, DeleteView, DetailView, UpdateView
 from django.views.generic.list import ListView
+from django_filters.views import FilterView
 
 from task_manager.tasks.forms import TaskForm
 from task_manager.tasks.models import Task
+from task_manager.tasks.filters import TaskFilter
 from task_manager.users.mixins import AuthorRequiredMixin
 
 
@@ -14,10 +16,11 @@ class TaskView(DetailView):
     model = Task
     template_name = 'tasks/preview.html'
 
-
-class TaskListView(ListView):
+class TaskListView(FilterView):
     queryset = Task.objects.all()
     template_name = 'tasks/list.html'
+    model = Task
+    filterset_class = TaskFilter
 
 
 class CreateTaskView(SuccessMessageMixin, CreateView):
